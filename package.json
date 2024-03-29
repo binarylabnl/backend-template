@@ -1,0 +1,42 @@
+{
+  "name": "backend-template",
+  "private": true,
+  "maintainers": [
+    "Kevin van der Burgt <kevin@binarylab.nl>"
+  ],
+  "type": "module",
+  "engines": {
+    "node": ">=20.12.0",
+    "pnpm": ">=8.15.5"
+  },
+  "scripts": {
+    "dev": "node --import ./scripts/dev-loader.js --watch ./src/main.ts",
+    "build": "rimraf dist && tsc",
+    "start": "node ./dist/main.js"
+  },
+  "dependencies": {
+    "@koa/cors": "^5.0.0",
+    "@koa/router": "^12.0.1",
+    "dotenv": "^16.4.5",
+    "koa": "^2.15.2",
+    "koa-bodyparser": "^4.4.1",
+    "koa-helmet": "^7.0.2",
+    "ts-pattern": "^5.0.8",
+    "winston": "^3.13.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.15.0",
+    "@types/koa-bodyparser": "^4.3.12",
+    "@types/koa__cors": "^5.0.0",
+    "@types/koa__router": "^12.0.4",
+    "@types/node": "^20.11.30",
+    "@typescript-eslint/eslint-plugin": "^7.4.0",
+    "@typescript-eslint/parser": "^7.4.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.3"
+  }
+}
